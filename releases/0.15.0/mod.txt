@@ -1,0 +1,54 @@
+{
+    "name": "BODYCAM",
+    "description": "Bodycam-style weapon movement and FreeAim.",
+    "author": "Brouken",
+    "version": "0.15.0",
+    "blt_version": 2,
+    "hooks": [
+        {
+            "hook_id": "lib/units/beings/player/states/playerstandard",
+            "script_path": "main.lua"
+        },
+        {
+            "hook_id": "lib/units/cameras/fpcameraplayerbase",
+            "script_path": "freeaim.lua"
+        },
+        {
+            "hook_id": "lib/units/cameras/fpcameraplayerbase",
+            "script_path": "camera.lua"
+        },
+        {
+            "hook_id": "lib/units/weapons/raycastweaponbase",
+            "script_path": "firing.lua"
+        }
+    ],
+    "keybinds": [
+        {
+            "keybind_id": "bodycam_compare_view",
+            "name": "BODYCAM - Comparar vista",
+            "description": "Alterna Bodycam y Vanilla. Conserva el preset y reinicia FreeAim para comparar desde el centro.",
+            "script_path": "compare_view.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": false
+        },
+        {
+            "keybind_id": "bodycam_switch_mode",
+            "name": "BODYCAM - Recargar y cambiar perfil",
+            "description": "Recarga y valida tuning.lua, luego cambia al siguiente perfil BODYCAM.",
+            "script_path": "switch_mode.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": false
+        },
+        {
+            "keybind_id": "bodycam_toggle_freeaim",
+            "name": "BODYCAM - FreeAim ON/OFF",
+            "description": "Activa o desactiva solo FreeAim; conserva la inercia del preset.",
+            "script_path": "toggle_freeaim.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": false
+        }
+    ]
+}
